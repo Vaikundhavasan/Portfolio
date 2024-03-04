@@ -5,17 +5,34 @@ import { AppWrap } from "../../wrapper";
 import images from "../../constants/images";
 import "./About.scss";
 
-import { urlFor, client } from "../../client";
+const abouts = [
+  {
+    title: "Web Designer",
+    imgUrl: images.about01,
+    description:
+      "I am a Web Designer with a passion for creating beautiful designs.",
+  },
+  {
+    title: "Backend Developer",
+    imgUrl: images.about02,
+    description:
+      "I am a Backend developer with a passion for building functional web applications",
+  },
+  {
+    title: "Frontend Developer",
+    imgUrl: images.about03,
+    description:
+      "I am a frontend developer with a passion for building beautiful and functional web applications.",
+  },
+  {
+    title: "React Native Developer",
+    imgUrl: images.about04,
+    description:
+      "I am a React Native Developer with a passion for building beautiful and functional mobile applications.",
+  },
+];
 
 const About = () => {
-  const [abouts, setAbouts] = useState([]);
-
-  useEffect(() => {
-    const query = '*[_type == "abouts"]';
-
-    client.fetch(query).then((data) => setAbouts(data));
-  }, []);
-
   return (
     <>
       <h2 className="head-text">
@@ -34,7 +51,7 @@ const About = () => {
             className="app__profile-item"
             key={idx}
           >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
+            <img src={about.imgUrl} alt={about.title} />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
