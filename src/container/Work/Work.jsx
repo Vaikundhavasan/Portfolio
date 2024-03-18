@@ -8,12 +8,44 @@ import images from "../../constants/images";
 
 const works = [
   {
-    title: "New",
+    title: "Restaurant Landing Page",
     description: "",
-    projectLink: "",
-    codeLink: "",
-    imgUrl: images.amazon,
-    tags: ["All", "UI/UX"],
+    projectLink: "https://vaikundhavasan.github.io/landing-page/",
+    codeLink: "https://github.com/Vaikundhavasan/landing-page",
+    imgUrl: images.landing_page,
+    tags: ["All"],
+  },
+  {
+    title: "Dice Game",
+    description: "",
+    projectLink: "https://vaikundhavasan.github.io/Dice-Game/",
+    codeLink: "https://github.com/Vaikundhavasan/Dice-Game",
+    imgUrl: images.dice_game,
+    tags: ["All"],
+  }, 
+  {
+    title: "Food Lab Landing Page",
+    description: "",
+    projectLink: "https://vaikundhavasan.github.io/internshipTask/",
+    codeLink: "https://github.com/Vaikundhavasan/internshipTask",
+    imgUrl: images.food_lab,
+    tags: ["All"],
+  },
+  {
+    title: "FAST REACT PIZZA COMPANY",
+    description: "",
+    projectLink: "https://vaikundhavasan.github.io/React-Pizza/",
+    codeLink: "https://github.com/Vaikundhavasan/React-Pizza",
+    imgUrl: images.react_pizza,
+    tags: ["All"],
+  },
+  {
+    title: "Zip Code",
+    description: "",
+    projectLink: "https://vaikundhavasan.github.io/zipCodeLive/",
+    codeLink: "https://github.com/Vaikundhavasan/zipCodeLive",
+    imgUrl: images.zip_code,
+    tags: ["All"],
   },
 ];
 
@@ -42,7 +74,7 @@ const Work = () => {
       </h2>
 
       <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
+        {["All"].map(
           (item, idx) => (
             <div
               onClick={() => handleWorkFilter(item)}

@@ -34,6 +34,12 @@ import nb from "../assets/nb.png";
 import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
 
+import landing_page from "../assets/landing_page.png"
+import dice_game from "../assets/dice_game.png"
+import react_pizza from "../assets/react_pizza.png"
+import zip_code from "../assets/zip_code.png"
+import food_lab from "../assets/food_lab.png"
+
 export default {
   email,
   mobile,
@@ -68,4 +74,10 @@ export default {
   nb,
   skype,
   spotify,
+  landing_page,
+  dice_game,
+  react_pizza,
+  zip_code,
+  food_lab,
 };
+

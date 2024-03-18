@@ -4,24 +4,53 @@ import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
 import { AppWrap } from "../../wrapper";
-import { urlFor, client } from "../../client";
 import "./Skills.scss";
+import images from "../../constants/images";
+
+const experience = [
+  {
+    year:"2023-2024",
+    works:[
+      {
+        name:"Web Developer Intern",
+        company:"Steam Troops Innovation Labs Pvt Ltd",
+        desc:"I worked as a Intern over 6 months",
+      }
+    ],
+  }
+];
+const skills = [
+  {
+    name:"HTML",
+    icon:images.html,
+  },
+  {
+    name:"CSS",
+    icon:images.css,
+  },
+  {
+    name:"Java Script",
+    icon:images.javascript,
+  },
+  {
+    name:"React JS",
+    icon:images.react,
+  },
+  {
+    name:"Sass",
+    icon:images.sass,
+  },
+  {
+    name:"Node JS",
+    icon:images.node,
+  },
+  {
+    name:"API",
+    icon:images.api,
+  },
+];
 
 const Skills = () => {
-  const [experience, setExperience] = useState([]);
-  const [skills, setSkills] = useState([]);
-
-  useEffect(() => {
-    const query = "*[_type == 'experiences']";
-    const skillsQuery = "*[_type == 'skills']";
-
-    client.fetch(query).then((data) => {
-      setExperience(data);
-    });
-    client.fetch(skillsQuery).then((data) => {
-      setSkills(data);
-    });
-  }, []);
 
   return (
     <>
@@ -39,7 +68,7 @@ const Skills = () => {
                 className="app__flex"
                 style={{ backgroundColor: skill.bgColor }}
               >
-                <img src={urlFor(skill.icon)} alt={skill.name} />
+                <img src={skill.icon} alt={skill.name} />
               </div>
               <p className="p-text">{skill.name}</p>
             </motion.div>
